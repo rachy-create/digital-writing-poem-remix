@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- custom font -->
-    <link <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
     
 
     <title>Among the Stars</title>
@@ -17,10 +15,10 @@
     <!-- styles -->
     <style>
       body {
-        font-family: 'Berkshire Swash', cursive;
+        font-family: 'Inconsolata', monospace;
         margin: 2em;
         background-color: #271C61;
-        color: #EBA960;
+        color: #B6ADE3;
         font-size: 1.2em;
       }
       h1 {
@@ -42,9 +40,10 @@
     <div id="poem"></div>
     <script>
       // set up the lists of words
-      const subjects = "you,I,we,they".split(","),
-        verbs = "run,walk,speak,drift,talk,whisper".split(","),
-        objects = "me,you,her,him,them".split(",");
+      const subjects = "stars,aliens,satellites,rocks".split(","),
+        verbs = "sparkle,float,crash,beep,twinkle,trasmit".split(","),
+        smallWords = "at the,to,on".split(",");    
+        objects = "sky,moon,earth,sun,space".split(",");
       // set up the counter
       let counter = 0;
 
@@ -64,7 +63,9 @@
           getRandomFromList(subjects) +
           " " +
           getRandomFromList(verbs) +
-          " to " +
+          "  " +
+          getRandomFromList (smallWords) +
+          " " +   
           getRandomFromList(objects);
         const lineText = document.createTextNode(text);
         line.appendChild(lineText);
